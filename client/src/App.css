@@ -1,0 +1,87 @@
+
+body {
+  background-image: url('./assets/todo.jpg');
+  background-color: hsl(200, 39%, 88%);
+  max-width: 80%;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  font-family: Papyrus;
+}
+
+.ktLogo {
+  width: 250px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.app {
+  padding: 100px 100px 100px 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+  align-items: center;
+  background-color: white;
+}
+
+form {
+  width: 95%;
+}
+
+.form-input {
+  margin: 10px 0px;
+}
+
+.form-input input, .form-input textarea {
+  width: 100%;
+  line-height: 1.5;
+  border-radius: .25rem;
+  border: 1px solid rgb(7, 29, 7);
+  padding: .375rem .75rem;
+}
+.images {
+  float: right;
+  position: absolute;
+  margin-left: 55%;
+  margin-top: 50px;
+}
+
+.blog-post-display {
+  border: 1px solid rgb(6, 14, 6);
+  margin: 5px 0px;
+  border-radius: 4px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.delete {
+  background-color : #f17575;
+  color: aliceblue;
+  line-height: 1.5;
+  border-radius: .25rem;
+  cursor: pointer;
+  padding: .375rem .75rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  background-color : #007bff;
+  color: aliceblue;
+  line-height: 1.5;
+  border-radius: .25rem;
+  cursor: pointer;
+  padding: .375rem .75rem;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
