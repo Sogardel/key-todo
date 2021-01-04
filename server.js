@@ -8,13 +8,13 @@ const PORT = process.env.PORT||8080;
 
 const routes =  require('./routes/api');
 //mongodb
-//mongo connect
 mongoose.connect(process.env.MONGODB_URI||MONGODB_URI, {
     useNewUrlParser :true,
     useUnifiedTopology:true
 })
 
 mongoose.connection.on('connected', ()=>{
+    
     console.log('Mongose is conected!')
 });
 
