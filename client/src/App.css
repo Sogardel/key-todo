@@ -85,3 +85,6 @@ button {
   margin-left: auto;
   margin-right: auto;
 }
+button[disabled] {
+  background-color : #5d5e60;
+}

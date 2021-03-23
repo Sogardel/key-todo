@@ -17,13 +17,12 @@ class App extends React.Component{
   componentDidMount = ()=>{
     this.getTodoPosts();
   }
-  stringlength= ()=>{   
-
-    if(this.state.title.length<5 || this.state.title.length> 16)
-    { alert("Please input the title between " +5+ " and " +16+ " characters");
-    }
-    else
-    {this.submit();}
+  isEnabled= ()=>{   
+      if(this.state.title.length<5 || this.state.title.length> 16)
+          { 
+            alert("Please input the title between " +5+ " and " +16+ " characters");
+            return false;}
+      else{return true;}
     };
 
   getTodoPosts = () =>{
@@ -42,6 +41,8 @@ class App extends React.Component{
   handleChnage = ({target})=> {
     const {name, value} = target;
     this.setState({[name]:value});
+
+    
   };
 
   submit = (event)=>{
@@ -131,6 +132,8 @@ update = (event)=>{
  
   render() {
     console.log('state', this.state);
+    const { title, body } = this.state;
+    const isEnabled = title.length > 5 && title.length < 16 && body.length > 1 && body.length < 100 ;
     //jSX
     return(
 
@@ -139,7 +142,7 @@ update = (event)=>{
             <h2>Easy Todo App!</h2>
             <img className="ktLogo" src={ktLogo} alt="logo" />
             </div>
-        <form onSubmit = {this.stringlength}>
+        <form onSubmit = {this.submit}>
           <div className = "form-input">
           <p>Add a todo title:</p>
            <input
@@ -159,7 +162,7 @@ update = (event)=>{
             value={this.state.body}
             onChange={this.handleChnage}/>
           </div>
-          <button>Add todo!</button>
+          <button disabled={!isEnabled}>Add todo!</button>
           </form>
           <div className="blog">
             {this.displayTodoPost(this.state.posts)}
