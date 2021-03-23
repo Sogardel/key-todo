@@ -1,10 +1,23 @@
 const mongoose = require('mongoose');
+const validator = require('mongoose-validator')
 
 
 //schema
 const Schema = mongoose.Schema;
 const TodoPostSchema = new Schema({
-    title : String,
+    //title : String,
+    title: {
+        type: String,
+        required: true,
+        minlength: 4,
+        maxlength: 16,
+        validate: [
+            validator({
+              validator: 'isEmail',
+              message: 'Oops..please enter valid email'
+            })
+          ]
+      },
     body : String,
     date : {
         type : String,
