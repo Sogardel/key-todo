@@ -8,9 +8,9 @@ const TodoPostSchema = new Schema({
     //title : String,
     title: {
         type: String,
-        required: true,
-        minlength: 4,
-        maxlength: 16
+        required: [true, 'Code required'],
+        minlength:[5,'Minimun code length 5 characters'],
+        maxlength: [6,'Maximum title length is 16 characters']
       },
     body : String,
     date : {
