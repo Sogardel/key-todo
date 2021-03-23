@@ -10,13 +10,7 @@ const TodoPostSchema = new Schema({
         type: String,
         required: true,
         minlength: 4,
-        maxlength: 16,
-        validate: [
-            validator({
-              validator: 'isEmail',
-              message: 'Oops..please enter valid email'
-            })
-          ]
+        maxlength: 16
       },
     body : String,
     date : {
