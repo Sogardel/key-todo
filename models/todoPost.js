@@ -6,11 +6,7 @@ const validator = require('mongoose-validator')
 const Schema = mongoose.Schema;
 const TodoPostSchema = new Schema({
     //title : String,
-    title: {
-        type: String,
-        minlength:[5,'Minimun code length 5 characters'],
-        maxlength: [6,'Maximum title length is 16 characters']
-      },
+    title: String,
     body : String,
     date : {
         type : String,

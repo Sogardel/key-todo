@@ -11,9 +11,20 @@ class App extends React.Component{
     body : '',
     posts :[]
   };
+
+
+  
   componentDidMount = ()=>{
     this.getTodoPosts();
   }
+  stringlength= ()=>{   
+
+    if(this.state.title.length<5 || this.state.title.length> 16)
+    { alert("Please input the title between " +5+ " and " +16+ " characters");
+    }
+    else
+    {this.submit();}
+    };
 
   getTodoPosts = () =>{
     axios.get("/api")
@@ -39,6 +50,8 @@ class App extends React.Component{
       title: this.state.title,
       body: this.state.body
     };
+
+
     axios({
       url: '/api/save',
       method: 'POST',
@@ -126,7 +139,7 @@ update = (event)=>{
             <h2>Easy Todo App!</h2>
             <img className="ktLogo" src={ktLogo} alt="logo" />
             </div>
-        <form onSubmit = {this.submit}>
+        <form onSubmit = {this.stringlength}>
           <div className = "form-input">
           <p>Add a todo title:</p>
            <input
