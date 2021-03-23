@@ -70,7 +70,7 @@ class App extends React.Component{
        this.resetUserInputs();
        this.getTodoPosts();
       })    } catch (err) {
-        console.log(err)
+        //console.log(err)
         //err.response.data.msg && setError(err.response.data.msg);
     }
 };
