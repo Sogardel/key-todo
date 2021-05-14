@@ -133,7 +133,7 @@ update = (event)=>{
   render() {
     console.log('state', this.state);
     const { title, body } = this.state;
-    const isEnabled = title.length > 5 && title.length < 16 && body.length > 1 && body.length < 100 ;
+    const isEnabled = title.length >= 5 && title.length < 16 && body.length > 1 && body.length < 100 ;
     //jSX
     return(
 
