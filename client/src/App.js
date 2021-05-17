@@ -133,14 +133,14 @@ update = (event)=>{
   render() {
     console.log('state', this.state);
     const { title, body } = this.state;
-    const isEnabled = title.length >= 5 && title.length < 16 && body.length > 1 && body.length <= 100 ;
+    const isEnabled = title.length > 5 && title.length < 16 && body.length > 1 && body.length < 100 ;
     //jSX
     return(
 
       <div class = 'app'>
             <div className = 'header'>
             <h2>Easy Todo App!</h2>
-            <h5>Version 0.2</h5>
+            <h5>Version 0.3</h5>
             <img className="ktLogo" src={ktLogo} alt="logo" />
             </div>
         <form onSubmit = {this.submit}>
