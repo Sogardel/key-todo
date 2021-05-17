@@ -140,6 +140,7 @@ update = (event)=>{
       <div class = 'app'>
             <div className = 'header'>
             <h2>Easy Todo App!</h2>
+            <h5>Version 0.2</h5>
             <img className="ktLogo" src={ktLogo} alt="logo" />
             </div>
         <form onSubmit = {this.submit}>
